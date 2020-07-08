@@ -34,3 +34,24 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
+
+
+apply plugin: 'com.novoda.bintray-release'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.novoda:bintray-release:0.9.1'
+    }
+}
+
+publish {
+    userOrg = 'mengcuiguang'
+    groupId = 'com.permissionx.mcgdev'
+    artifactId = 'permissionx'
+    publishVersion = '1.0.0'
+    desc = 'permssion desc'
+    website = 'https://github.com/mengcuiguang/PermissionX.git'
+}
